@@ -1,4 +1,4 @@
-﻿using MauiAppMinhasCompras.Models; // Importa os modelos da aplicação
+﻿﻿using MauiAppMinhasCompras.Models; // Importa os modelos da aplicação
 using SQLite; // Importa a biblioteca do SQLite
  //caso a cor das using esteja apagadas significa que o programa ou aplicacao que voce busca usar nao esta implementado no codigo para o uso do arquivo
 
@@ -25,7 +25,7 @@ namespace MauiAppMinhasCompras.Helpers
         // Atualiza um produto existente
         public Task<List<Produto>> Update(Produto p)
         {
-            string sql = "UPDATE Produto SET Descricao=?, Quantidade =?, Preco=?, WHERE Id=?";
+            string sql = "UPDATE Produto SET Descricao=?, Quantidade =?, Preco=? WHERE Id=?";
             // Comando SQL para atualizar um produto pelo Id
 
             return _conn.QueryAsync<Produto>(
